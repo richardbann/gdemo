@@ -1,0 +1,11 @@
+.git
+.venv
+config
+files
+.env
+.flake8
+.gitignore
+.dockerignore
+docker-compose.yml
+makefile
+requirements_dev.txt

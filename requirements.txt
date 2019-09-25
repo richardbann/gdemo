@@ -1,0 +1,4 @@
+django==2.2.5
+sec==0.2.2
+psycopg2==2.8.3
+django-improved-user==1.0.0

@@ -1,0 +1,2 @@
+docker-compose
+pyopenssl==19.0.0

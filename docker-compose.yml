@@ -1,0 +1,33 @@
+version: "3.7"
+
+volumes:
+  data:
+
+services:
+  postgres:
+    network_mode: host
+    image: postgres:11.5
+    volumes:
+      - data:/data
+      - ./config/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d:ro
+    env_file: .env
+
+  nginx:
+    network_mode: host
+    image: nginx:1.16.1
+    volumes:
+      - ./files:/files
+      - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./config/ssl:/ssl:ro
+
+  django:
+    network_mode: host
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    volumes:
+      - ./files:/files
+      # - .:/usr/src
+    env_file: .env
+    user: 8000:8000
+    command: ["django-admin", "runserver"]
