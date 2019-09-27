@@ -5,4 +5,4 @@ ENV PYTHONPATH /usr/src/gdemo_django
 
 COPY --chown=8000:8000 / /usr/src
 
-RUN pip install -r /usr/src/requirements.txt
+RUN pip install -r /usr/src/docker/requirements.txt
