@@ -17,6 +17,7 @@ services:
     image: nginx:1.16.1
     volumes:
       - ./files:/files
+      - ./tailwind/build:/tailwind:ro
       - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./config/ssl:/ssl:ro
 

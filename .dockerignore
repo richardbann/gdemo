@@ -9,3 +9,4 @@ files
 docker-compose.yml
 makefile
 requirements_dev.txt
+tailwind

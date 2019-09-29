@@ -1,2 +1,28 @@
-{% load i18n %}
-<h1>{% trans "Welcome to GStack Demo!" %}</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <title>Tailwind</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/main.css">
+  <body>
+    <h1>Hello Tailwind!</h1>
+
+    <div class="md:flex">
+      <div class="md:flex-shrink-0">
+        <img class="rounded-lg md:w-56" src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80" alt="Woman paying for a purchase">
+      </div>
+      <div class="mt-4 md:mt-0 md:ml-6">
+        <div class="uppercase tracking-wide text-sm text-indigo-600 font-bold">Marketing</div>
+        <a href="#" class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline">Finding customers for your new business</a>
+        <p class="mt-2 text-gray-600">Getting a new business off the ground is a lot of hard work. Here are five ideas you can use to find your first customers.</p>
+      </div>
+    </div>
+
+    <div class="bg-indigo-900 text-center py-4 lg:px-4">
+      <div class="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
+        <span class="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3">New</span>
+        <span class="font-semibold mr-2 text-left flex-auto">Get the coolest t-shirts from our brand new store</span>
+        <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
+      </div>
+    </div>
+  </body>
+</html>
