@@ -1,10 +1,9 @@
-#!.venv_dev/bin/python
+#!.venv/bin/python
 
 import random
 import os
 
 from OpenSSL import crypto, SSL
-import environ
 
 
 CERT_NOT_AFTER = 3 * 365 * 24 * 60 * 60
@@ -95,10 +94,10 @@ def generate(names, ips=None, cakeyfile=None, cacertfile=None, dest=""):
 
 
 if __name__ == '__main__':
-    env = environ.Env()
-    env.read_env(env_file=".env")
+    from dotenv import load_dotenv
+    load_dotenv()
     generate(
-        [x.strip() for x in env("HOST_NAMES").split(",")],
+        [x.strip() for x in os.environ.get("HOST_NAMES").split(",")],
         ips=["127.0.0.1"],
         dest="config/ssl"
     )

@@ -158,8 +158,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'HOST': sec.load("DJANGO_DB_HOST"),
         'PORT': int(sec.load("DJANGO_DB_PORT")),
-        'NAME': 'django',
-        'USER': 'django',
+        'NAME': sec.load("DJANGO_DB_NAME"),
+        'USER': sec.load("DJANGO_DB_USER"),
         'PASSWORD': sec.load('django_db_password'),
         # 'OPTIONS': {
         #     'sslmode': 'verify-ca',
