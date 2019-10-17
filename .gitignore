@@ -2,4 +2,4 @@
 __pycache__
 .env
 files
-*.sublime-workspace
+frontend/node_modules

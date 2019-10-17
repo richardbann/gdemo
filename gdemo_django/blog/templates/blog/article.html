@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="{% static "styles.css" %}">
+    <title>Blog</title>
+</head>
+<body>
+  <article class="markdown mx-6">
+    {{object.html|safe}}
+  </article>
+</body>
+</html>

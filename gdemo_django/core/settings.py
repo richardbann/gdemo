@@ -45,7 +45,11 @@ STATIC_URL = '/static/'
 STATIC_ROOT = '/src/static/'
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'django.contrib.staticfiles.finders.FileSystemFinder',
 )
+STATICFILES_DIRS = [
+    "/usr/src/frontend/build",
+]
 
 MEDIA_ROOT = '/files/'
 MEDIA_URL = '/media/'
@@ -79,6 +83,7 @@ INSTALLED_APPS = [
 
     "demo.apps.DemoConfig",
     "user.apps.UserConfig",
+    "blog.apps.BlogConfig",
     # 'django_extensions',
     # 'mailer',
     # 'channels',
@@ -224,6 +229,13 @@ LANGUAGES = (
     ('en', _('English')),
     ('hu', _('Hungarian')),
 )
+
+MARTOR_ENABLE_CONFIGS = {
+    'imgur': 'false',     # to enable/disable imgur/custom uploader.
+    'mention': 'false',  # to enable/disable mention
+    'jquery': 'true',    # to include/revoke jquery (require for admin default django)
+    'living': 'false',   # to enable/disable live updates in preview
+}
 
 # LOCALE_PATHS = ('/data/files/locale/',)
 # MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
