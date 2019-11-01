@@ -44,8 +44,8 @@ SENDGRID_API_KEY = sec.load("sendgrid_api_key")
 STATIC_URL = '/static/'
 STATIC_ROOT = '/src/static/'
 STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'django.contrib.staticfiles.finders.FileSystemFinder',
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+    "glob_static.finder.GlobFileSystemFinder",
 )
 STATICFILES_DIRS = [
     "/usr/src/frontend/build",
@@ -84,6 +84,8 @@ INSTALLED_APPS = [
     "demo.apps.DemoConfig",
     "user.apps.UserConfig",
     "blog.apps.BlogConfig",
+    "core",
+    "glob_static",
     # 'django_extensions',
     # 'mailer',
     # 'channels',
@@ -92,7 +94,6 @@ INSTALLED_APPS = [
     # 'rest_framework.authtoken',
     # 'rest_auth',
     # 'explorer.apps.ExplorerAppConfig',
-    # 'core.apps.Config',
     # 'rosetta.apps.RosettaAppConfig',
     # 'improveduser.apps.Config',
 ]

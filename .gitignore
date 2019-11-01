@@ -3,3 +3,4 @@ __pycache__
 .env
 files
 frontend/node_modules
+frontend/build
