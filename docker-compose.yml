@@ -41,5 +41,5 @@ services:
       - .:/usr/src
     working_dir: /usr/src/frontend
     env_file: .env
-    user: ${UID}:${GID}
+    user: ${UID}
     command: node_modules/.bin/webpack --mode development --watch
